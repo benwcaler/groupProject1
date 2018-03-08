@@ -61,13 +61,13 @@ window.onload = function () {
     //create the poster buttons
     $(document).on("click", ".mPoster", function () {
         console.log($(this).attr("data-selected"))
-        if (!$(this).attr("data-selected")) {
+        if ($(this).attr("data-selected") === "false") {
             console.log("inside")
             $(this).attr("data-selected", true);
             $(this).append("<img src='assets/images/cm.png' id='check' style='height: 90px; z-index: 2; position: absolute; left: 40px; top: 75px;'>")
         } else {
-            // $(this).attr("data-selected", false);
-            // $(this).parent().find('#check').not(this).remove();
+            $(this).attr("data-selected", false);
+            $(this).parent().find('#check').not(this).remove();
         }
     })
     //create the more info buttons underneath
