@@ -4,7 +4,6 @@ window.onload = function () {
     var genre = 12;
     var movieName;
     var imdbId;
-    var trailerUrl = "http://trailersapi.com/trailers.json?movie=" + movieName + "&limit=1&width=650"
     var titles = [];
     var posters = [];
     //var searchterm = something from firebase
@@ -31,7 +30,6 @@ window.onload = function () {
                         titles.push(src[i].title);
                         posters.push(src[i].poster_path)
                     }
-                    console.log(titles)
                 });
             }
         });
@@ -40,23 +38,38 @@ window.onload = function () {
     $("#console").on("click", function () {
         console.log(titles)
     })
-
+    //grab the posters
     $("#posters").on("click", function () {
-        for (var i = 0; i < titles.length; i++) {
-            $.ajax({
-                url: "http://img.omdbapi.com/?apikey=119dc119&s=" + titles[i],
-                method: "GET"
-            }).then(function (response) {
-                var div = $("<div>")
-                var poster = $("<img>")
-                poster.attr("src", response)
-            })
+        console.log(posters)
+        for (var i = 0; i < posters.length; i++) {
+            if (posters[i] !== null) {
+                var div = $("<div>");
+                var poster = $("<img>");
+                poster.attr("src", "https://image.tmdb.org/t/p/original/" + posters[i]);
+                poster.css("height", "250px")
+                div.append(poster);
+                div.addClass("mPoster")
+                div.attr("data-selected", false)
+                div.css("position", "relative")
+                div.css("z-index", "0")
+                $("#container").append(div);
+            }
         }
     })
-    //grab the posters
+
 
     //create the poster buttons
-
+    $(document).on("click", ".mPoster", function () {
+        console.log($(this).attr("data-selected"))
+        if (!$(this).attr("data-selected")) {
+            console.log("inside")
+            $(this).attr("data-selected", true);
+            $(this).append("<img src='assets/images/cm.png' id='check' style='height: 90px; z-index: 2; position: absolute; left: 40px; top: 75px;'>")
+        } else {
+            // $(this).attr("data-selected", false);
+            // $(this).parent().find('#check').not(this).remove();
+        }
+    })
     //create the more info buttons underneath
 
     //bring up the pop up with the trailer showing and the synopsis underneath
