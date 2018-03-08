@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +10,10 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Custom styles for this template -->
     <link href="assets/css/sticky-footer-navbar.css" rel="stylesheet">
-    <title>Choose a Group Movie with PikaFlik - Home Page</title>
+    <title>PikaFlik - Home</title>
 </head>
 
 <body>
-
 
 
     <!-- Navbar Begin -->
@@ -42,48 +42,27 @@
     </nav>
     <!-- Navbar End -->
 
-  
-  
-  <script>
-    window.fbAsyncInit = function() {
-      FB.init({
-        appId      : '1772233526160553',
-        cookie     : true,
-        xfbml      : true,
-        version    : '{latest-api-version}'
-      });
-        
-      FB.AppEvents.logPageView();   
-        
-    };
-  
-    <div id="fb-root"></div>
-(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=1772233526160553&autoLogAppEvents=1';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
 
-FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-});
-  </script>
+    <!-- Make Container for Bootstrap Rows -->
+    <div class="container" id="main-body">
 
-  
-  
-  
-  <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="true"></div>
+        <!-- Hardcode first row & Create button -->
+        <div class="row" id="first-row">
 
-  
+            <!-- Create button -->
+            <div class="col-md-3 top-height">
+                <span class="glyphicon glyphicon-plus" id="plus-box" aria-hidden="true"></span>
+            </div>
+           
 
-    
+            <!-- This is where we will append new buttons when add button is clicked. -->
+
+        </div>
 
 
 
 
-
+    </div>
 
 
 
