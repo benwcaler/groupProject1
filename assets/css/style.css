@@ -38,3 +38,13 @@
     margin-bottom: 27px;
 
 }
+
+.member {
+    height: 50px;
+    width: 50px;
+    border: solid 1px black;
+    float: left;
+    margin: 25px 50px;
+    border-radius: 15px;
+    background-color: white;
+}
