@@ -13,11 +13,11 @@ var config = {
   // Created a variable to reference to the firebase 
   var db = firebase.database();
 
-  db.ref().push({
-    trainName: "choo choo",
-    destination: "destination",
-    dateAdded: firebase.database.ServerValue.TIMESTAMP
-  })
+//   db.ref().push({
+//     trainName: "choo choo",
+//     destination: "destination",
+//     dateAdded: firebase.database.ServerValue.TIMESTAMP
+//   })
 
 var clickedNumber = 1;
 var rowNumber = 0;
