@@ -126,6 +126,7 @@ img{
     border-radius: 15px;
     background-color: white;
 }
+
 a{
     color: white;
     text-decoration: none;
@@ -136,3 +137,13 @@ a{
     height: auto;
 }
 
+
+.submit {
+
+    margin-top: 55px;
+
+}
+
+#secondRow {
+    margin-top: 55px;
+}
