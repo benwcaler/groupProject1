@@ -6,57 +6,75 @@ var config = {
     projectId: "pikaflik-9cfdc",
     storageBucket: "",
     messagingSenderId: "25073261476"
-  };
-  
-  firebase.initializeApp(config);
- 
-  // Created a variable to reference to the firebase 
-  var db = firebase.database();
-  const auth = firebase.auth();
-  auth.onAuthStateChanged(firebaseUser => { });
+};
+
+firebase.initializeApp(config);
+
+// Created a variable to reference to the firebase 
+var db = firebase.database();
+const auth = firebase.auth();
+auth.onAuthStateChanged(firebaseUser => { });
 
 
-  // Get Elements
-  var txtEmail;
-  var txtPassword;
-  
+// Get Elements
+var txtEmail;
+var txtPassword;
 
 
-  // Add login event
-  $("#btnLogin").on("click", function(){
+
+// Add login event
+$("#btnLogin").on("click", function () {
     // Get email and pass
     txtEmail = $("#txtEmail").val();
     txtPassword = $("#txtPassword").val();
     // Sign in 
     const promise = auth.signInWithEmailAndPassword(txtEmail, txtPassword);
     promise.catch(e => console.log(e.message));
-  })
+})
 
-  // Add Sign up event
-  $("#btnSignUp").on("click", function(){
+// Add Sign up event
+$("#btnSignUp").on("click", function () {
     // Get email and pass
     txtEmail = $("#txtEmail").val().trim();
     txtPassword = $("#txtPassword").val().trim();
     // Sign up 
     const promise = auth.signInWithEmailAndPassword(txtEmail, txtPassword);
     promise.catch(e => console.log(e.message));
+})
+
+
+  $(".submit").on("click", function (){
+
+//     // auth.signInWithEmailAndPassword('pehi@gmail.com', "password");
+//     auth.createUserWithEmailAndPassword('pehisa@gmail.com', 'pas12sword');
+console.log('test');
+
+$.ajax({
+    url: "https://itunes.apple.com/search?media=movie&term=shrek",
+    method: "GET"
+}).then(function (response) {
+    console.log(response);
+});
+
+
   })
 
 
-//   $(".submit").on("click", function (){
-    
-//     // auth.signInWithEmailAndPassword('pehi@gmail.com', "password");
-//     auth.createUserWithEmailAndPassword('pehisa@gmail.com', 'pas12sword');
+
+// Creating api call for itunes
+
+// ajax call for itunes
 
 
 
-//   })
-
-
-
-
-
-
+// $(".mPoster").on("click", function () {
+    // $.ajax({
+    //     url: "https://itunes.apple.com/search?media=movie&term=shrek",
+    //     method: "GET"
+    // }).then(function (response) {
+    //     console.log(response);
+    // });
+// })
 
 
 
@@ -106,22 +124,22 @@ $("#plus-box").on("click", function () {
 
     // } else {
 
-        var newDiv = $("<div class='col-md-3'></div>");
-        var newButton = $("<button>");
-        var p = $("<p>");
-        p.addClass("group-box");
-        newDiv.addClass("top-height");
-        newButton.text("Select");
-        p.append("Group 42");
-        p.append(newButton);
-        // newDiv.attr("margin-top", "25px");
-        newDiv.append(p);
-        $("#first-row").append(newDiv);
+    var newDiv = $("<div class='col-md-3'></div>");
+    var newButton = $("<button>");
+    var p = $("<p>");
+    p.addClass("group-box");
+    newDiv.addClass("top-height");
+    newButton.text("Select");
+    p.append("Group 42");
+    p.append(newButton);
+    // newDiv.attr("margin-top", "25px");
+    newDiv.append(p);
+    $("#first-row").append(newDiv);
     // }
 });
 
 // on click for movie poster
 
-$(".movieInfo").on('click', function(){
-    alert( "Handler for .click() called." );
+$(".movieInfo").on('click', function () {
+    alert("Handler for .click() called.");
 });
