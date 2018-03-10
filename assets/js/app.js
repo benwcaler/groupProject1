@@ -53,3 +53,9 @@ $("#plus-box").on("click", function () {
         $("#first-row").append(newDiv);
     // }
 });
+
+// on click for movie poster
+
+$(".movieInfo").on('click', function(){
+    alert( "Handler for .click() called." );
+});
