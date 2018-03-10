@@ -1,3 +1,24 @@
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyDeGkmM8yLp1mGe3Dh7sTVTxZA6XVj3srU",
+    authDomain: "pikaflik-9cfdc.firebaseapp.com",
+    databaseURL: "https://pikaflik-9cfdc.firebaseio.com",
+    projectId: "pikaflik-9cfdc",
+    storageBucket: "",
+    messagingSenderId: "25073261476"
+  };
+  
+  firebase.initializeApp(config);
+ 
+  // Created a variable to reference to the firebase 
+  var db = firebase.database();
+
+//   db.ref().push({
+//     trainName: "choo choo",
+//     destination: "destination",
+//     dateAdded: firebase.database.ServerValue.TIMESTAMP
+//   })
+
 var clickedNumber = 1;
 var rowNumber = 0;
 // On click function for add button, creates new space for group button
