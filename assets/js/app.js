@@ -12,6 +12,72 @@ var config = {
  
   // Created a variable to reference to the firebase 
   var db = firebase.database();
+  const auth = firebase.auth();
+  auth.onAuthStateChanged(firebaseUser => { });
+
+
+  // Get Elements
+  var txtEmail;
+  var txtPassword;
+  
+
+
+  // Add login event
+  $("#btnLogin").on("click", function(){
+    // Get email and pass
+    txtEmail = $("#txtEmail").val();
+    txtPassword = $("#txtPassword").val();
+    // Sign in 
+    const promise = auth.signInWithEmailAndPassword(txtEmail, txtPassword);
+    promise.catch(e => console.log(e.message));
+  })
+
+  // Add Sign up event
+  $("#btnSignUp").on("click", function(){
+    // Get email and pass
+    txtEmail = $("#txtEmail").val().trim();
+    txtPassword = $("#txtPassword").val().trim();
+    // Sign up 
+    const promise = auth.signInWithEmailAndPassword(txtEmail, txtPassword);
+    promise.catch(e => console.log(e.message));
+  })
+
+
+//   $(".submit").on("click", function (){
+    
+//     // auth.signInWithEmailAndPassword('pehi@gmail.com', "password");
+//     auth.createUserWithEmailAndPassword('pehisa@gmail.com', 'pas12sword');
+
+
+
+//   })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //   db.ref().push({
 //     trainName: "choo choo",
