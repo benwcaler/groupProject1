@@ -115,7 +115,6 @@ img{
 .center {
     text-align: center;
     margin-bottom: 27px;
-
 }
 
 .member {
@@ -127,6 +126,17 @@ img{
     border-radius: 15px;
     background-color: white;
 }
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.topMoviePoster{
+    width: 275px;
+    height: auto;
+}
+
 
 .submit {
 
