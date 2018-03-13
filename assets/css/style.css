@@ -1,11 +1,21 @@
+body {
+    margin-top: 60px;
+}
+
+
 #display-movies-here{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(auto, 1fr);
     grid-gap: 10px;
-    margin: 50px;
+    /* margin: 50px; */
 
 
+}
+
+h2{
+    margin-top: 60px;
+    text-align: center;
 }
 
 img{
@@ -115,7 +125,6 @@ img{
 .center {
     text-align: center;
     margin-bottom: 27px;
-
 }
 
 .member {
@@ -127,3 +136,25 @@ img{
     border-radius: 15px;
     background-color: white;
 }
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.topMoviePoster{
+    width: 275px;
+    height: auto;
+}
+
+
+.submit {
+
+    margin-top: 55px;
+
+}
+
+#secondRow {
+    margin-top: 55px;
+}
+

@@ -34,8 +34,12 @@
                     <li class="active">
                         <a href="#">Home</a>
                     </li>
-                    
                 </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="../navbar/" id="userName">Default</a></li>
+                    <li><a href="../navbar-static-top/">Static top</a></li>
+                    <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
+                  </ul>
             </div>
             <!--/.nav-collapse -->
         </div>
@@ -43,38 +47,76 @@
     <!-- Navbar End -->
 
   
+
+
+   
+    <div class="container">
+        <input type="email" id="txtEmail" placeholder="Email">
+        
+        <input type="password" id="txtPassword" placeholder="Password">
+
+        <button class="btn btn-action" id="btnLogin">
+            Log in
+        </button>
+
+        <button class="btn btn-secondary" id="btnSignUp">
+            Sign Up
+        </button>
+
+        <button class="btn btn-action hide" id="btnLogOut">
+            Log out
+        </button>
+
+
+        <div class="row" id='secondRow'>
+            <div class="col-12-md">Sign in to be able to decide on what movie to watch!</div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   <script>
-    window.fbAsyncInit = function() {
-      FB.init({
-        appId      : '1772233526160553',
-        cookie     : true,
-        xfbml      : true,
-        version    : '{latest-api-version}'
-      });
+//     window.fbAsyncInit = function() {
+//       FB.init({
+//         appId      : '1772233526160553',
+//         cookie     : true,
+//         xfbml      : true,
+//         version    : '{latest-api-version}'
+//       });
         
-      FB.AppEvents.logPageView();   
+//       FB.AppEvents.logPageView();   
         
-    };
+//     };
   
-    <div id="fb-root"></div>
-(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=1772233526160553&autoLogAppEvents=1';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
+//     <div id="fb-root"></div>
+// (function(d, s, id) {
+//   var js, fjs = d.getElementsByTagName(s)[0];
+//   if (d.getElementById(id)) return;
+//   js = d.createElement(s); js.id = id;
+//   js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=1772233526160553&autoLogAppEvents=1';
+//   fjs.parentNode.insertBefore(js, fjs);
+// }(document, 'script', 'facebook-jssdk'));
 
-FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-});
+// FB.getLoginStatus(function(response) {
+//     statusChangeCallback(response);
+// });
   </script>
 
   
   
   
-  <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="true"></div>
+  <!-- <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="true"></div> -->
 
   
 
