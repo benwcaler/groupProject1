@@ -24,7 +24,7 @@ window.onload = function () {
     $("#submit").on("click", function () {
         event.preventDefault();
         $.ajax({
-            url: "https://api.themoviedb.org/3/discover/movie?api_key=55fdfce207e38e045803eb5855ec3bca&language=en-US&sort_by=vote_count.asc&include_adult=false&include_video=true&page=1&release_date.gte=" + year + "&with_genres=" + genre,
+            url: "https://api.themoviedb.org/3/discover/movie?api_key=55fdfce207e38e045803eb5855ec3bca&language=en-US&sort_by=vote_count.asc&include_adult=false&include_video=true&page=1&primary_release_date.gte=" + year1 + "&primary_release_date.lte=" + year2 + "&with_genres=" + genre,
             method: "GET"
         }).then(function (response) {
             var pageNums = [];
@@ -42,7 +42,7 @@ window.onload = function () {
     $("#start").on("click", function () {
         for (let i = 0; i < pages.length; i++) {
             $.ajax({
-                url: "https://api.themoviedb.org/3/discover/movie?api_key=55fdfce207e38e045803eb5855ec3bca&language=en-US&include_adult=false&include_video=true&page=" + pages[i] + "&release_date.gte=" + year + "&with_genres=" + genre,
+                url: "https://api.themoviedb.org/3/discover/movie?api_key=55fdfce207e38e045803eb5855ec3bca&language=en-US&sort_by=vote_count.asc&include_adult=false&include_video=true&page=" + pages[i] + "&primary_release_date.gte=" + year1 + "&primary_release_date.lte=" + year2 + "&with_genres=" + genre,
                 method: "GET"
             }).then(function (response) {
                 calls++
