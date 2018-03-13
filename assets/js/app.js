@@ -14,7 +14,7 @@ var config = {
   var db = firebase.database();
   const auth = firebase.auth();
   auth.onAuthStateChanged(firebaseUser => { });
-
+  var logOut = document.getElementById("btnLogOut");
 
   // Get Elements
   var txtEmail;
@@ -38,34 +38,32 @@ var config = {
     txtEmail = $("#txtEmail").val().trim();
     txtPassword = $("#txtPassword").val().trim();
     // Sign up 
-    const promise = auth.signInWithEmailAndPassword(txtEmail, txtPassword);
+    const promise = auth.createUserWithEmailAndPassword(txtEmail, txtPassword);
     promise.catch(e => console.log(e.message));
   })
 
-
-//   $(".submit").on("click", function (){
-    
-//     // auth.signInWithEmailAndPassword('pehi@gmail.com', "password");
-//     auth.createUserWithEmailAndPassword('pehisa@gmail.com', 'pas12sword');
-
-
-
-//   })
+  // Add Sign out event
+  $("#btnLogOut").on("click", function(){
+    // Sign out 
+    firebase.auth().signOut();
+    console.log("test");
+  });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Add a reatime listener
+firebase.auth().onAuthStateChanged(firebaseUser => {
+  if (firebaseUser) {
+    console.log(firebaseUser)
+    console.log(firebaseUser.email)
+    console.log(firebaseUser.Kb.I)
+    logOut.classList.remove("hide");
+    $("#userName").text("Hi " + firebaseUser.email + "!");
+  } else { 
+    console.log('not logged in');
+    logOut.classList.add("hide");
+    $("#userName").text("Hi!");
+  }
+});
 
 
 
@@ -79,6 +77,19 @@ var config = {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+// Test for pushing data to the database
 //   db.ref().push({
 //     trainName: "choo choo",
 //     destination: "destination",
