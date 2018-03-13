@@ -18,10 +18,6 @@ var config = {
   var logOut = document.getElementById("btnLogOut");
 
 
-// Created a variable to reference to the firebase 
-var db = firebase.database();
-const auth = firebase.auth();
-auth.onAuthStateChanged(firebaseUser => { });
 
 
 // Get Elements
@@ -59,26 +55,12 @@ $("#btnSignUp").on("click", function () {
     console.log("test");
   });
 
-  $(".submit").on("click", function (){
-
-//     // auth.signInWithEmailAndPassword('pehi@gmail.com', "password");
-//     auth.createUserWithEmailAndPassword('pehisa@gmail.com', 'pas12sword');
-console.log('test');
-
-$.ajax({
-    url: "https://itunes.apple.com/search?media=movie&term=shrek",
-    method: "GET"
-}).then(function (response) {
-    console.log(response);
-});
-
-
-  })
 
 
 
 
-// Creating api call for itunes
+
+
 
 
 // Add a reatime listener
