@@ -1,3 +1,8 @@
+body {
+    margin-top: 60px;
+}
+
+
 #display-movies-here{
     display: grid;
     grid-template-columns: repeat(5, 1fr);

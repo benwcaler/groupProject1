@@ -6,9 +6,17 @@ var config = {
     projectId: "pikaflik-9cfdc",
     storageBucket: "",
     messagingSenderId: "25073261476"
-};
 
-firebase.initializeApp(config);
+  };
+  
+  firebase.initializeApp(config);
+ 
+  // Created a variable to reference to the firebase 
+  var db = firebase.database();
+  const auth = firebase.auth();
+  auth.onAuthStateChanged(firebaseUser => { });
+  var logOut = document.getElementById("btnLogOut");
+
 
 // Created a variable to reference to the firebase 
 var db = firebase.database();
@@ -38,10 +46,18 @@ $("#btnSignUp").on("click", function () {
     txtEmail = $("#txtEmail").val().trim();
     txtPassword = $("#txtPassword").val().trim();
     // Sign up 
-    const promise = auth.signInWithEmailAndPassword(txtEmail, txtPassword);
+    const promise = auth.createUserWithEmailAndPassword(txtEmail, txtPassword);
     promise.catch(e => console.log(e.message));
 })
 
+
+
+  // Add Sign out event
+  $("#btnLogOut").on("click", function(){
+    // Sign out 
+    firebase.auth().signOut();
+    console.log("test");
+  });
 
   $(".submit").on("click", function (){
 
@@ -61,8 +77,24 @@ $.ajax({
 
 
 
+
 // Creating api call for itunes
 
+
+// Add a reatime listener
+firebase.auth().onAuthStateChanged(firebaseUser => {
+  if (firebaseUser) {
+    console.log(firebaseUser)
+    console.log(firebaseUser.email)
+    console.log(firebaseUser.Kb.I)
+    logOut.classList.remove("hide");
+    $("#userName").text("Hi " + firebaseUser.email + "!");
+  } else { 
+    console.log('not logged in');
+    logOut.classList.add("hide");
+    $("#userName").text("Hi!");
+  }
+});
 // ajax call for itunes
 
 
@@ -97,6 +129,7 @@ $.ajax({
 
 
 
+// Test for pushing data to the database
 //   db.ref().push({
 //     trainName: "choo choo",
 //     destination: "destination",
