@@ -1,46 +1,48 @@
+/* div for jquery movie input */
 #display-movies-here{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(auto, 1fr);
     grid-gap: 10px;
-    /* margin: 50px; */
 
 
 }
-
+/* h2 styling */
 h2{
     margin-top: 60px;
     text-align: center;
 }
 
+/* Image styling */
 img{
     width: 100%;
-    margin: 10px;
+    /* margin: 10px; */
     box-shadow: 15px 15px;
     color: rgb(211, 211, 212);
 }
 
-
+/* Media query 980px */
 @media only screen and (max-width: 980px) {
     body {
         background-color: red;
     }
     img{
         width: 100%;
-        margin: 10px;
+        /* margin: 10px; */
         
     }
+    /* css grid for movies */    
     #display-movies-here{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(auto, 1fr);
         grid-gap: 10px;
-        margin: 50px;
     
     
     }
 }
 
+/* media query 760px */
 @media only screen and (max-width: 768px) {
     body {
         background-color: rebeccapurple;
@@ -50,17 +52,16 @@ img{
         margin: 10px;
         
     }
+    /* css grid for movies */    
     #display-movies-here{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(auto, 1fr);
         grid-gap: 10px;
-        margin: 50px;
-    
-    
     }
 }
 
+/* media query 640px */
 @media only screen and (max-width: 640px) {
     body {
         background-color: lightblue;
@@ -70,14 +71,12 @@ img{
         margin: 10px;
         
     }
+    /* css grid for movies */
     #display-movies-here{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(auto, 1fr);
         grid-gap: 10px;
-        margin: 50px;
-    
-    
     }
 }
 
