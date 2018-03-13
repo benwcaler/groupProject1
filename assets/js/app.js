@@ -69,11 +69,11 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
     console.log(firebaseUser)
     console.log(firebaseUser.email)
     console.log(firebaseUser.Kb.I)
-    logOut.classList.remove("hide");
+    // logOut.classList.remove("hide");
     $("#userName").text("Hi " + firebaseUser.email + "!");
   } else { 
     console.log('not logged in');
-    logOut.classList.add("hide");
+    // logOut.classList.add("hide");
     $("#userName").text("Hi!");
   }
 });
