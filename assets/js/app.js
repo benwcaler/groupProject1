@@ -55,7 +55,12 @@ $("#plus-box").on("click", function () {
 });
 
 
-
+// images div for grp page
+function image() {
+    var img = document.createElement("IMG");
+    img.src = "/images/img1.gif";
+    $('#image').html(img); 
+}
 
 
 

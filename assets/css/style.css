@@ -22,9 +22,9 @@ img{
 
 
 @media only screen and (max-width: 980px) {
-    body {
+    /* body {
         background-color: red;
-    }
+    } */
     img{
         width: 100%;
         margin: 10px;
@@ -42,9 +42,9 @@ img{
 }
 
 @media only screen and (max-width: 768px) {
-    body {
+    /* body {
         background-color: rebeccapurple;
-    }
+    } */
     img{
         width: 100%;
         margin: 10px;
@@ -62,9 +62,9 @@ img{
 }
 
 @media only screen and (max-width: 640px) {
-    body {
+    /* body {
         background-color: lightblue;
-    }
+    } */
     img{
         width: 100%;
         margin: 10px;
