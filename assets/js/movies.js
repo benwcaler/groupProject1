@@ -105,6 +105,44 @@ window.onload = function () {
             if (posters[k] !== null) {
                 var div = $("<div>");
                 var poster = $("<img>");
+
+                // var modal = $("<div class='container1'>")
+                // var button = $("<button type='button' class='btn btn-info btn-md' data-toggle='modal' data-target='#myModal'>Movie Info...</button>")
+
+                // // var modal1 = $("<div class='modal fade' id='myModal' role='dialog'")
+                // modal.append(button);
+               
+                 
+                    // <!-- Modal -->
+                    // <div class="modal fade" id="myModal" role="dialog">
+                    //     <div class="modal-dialog">
+                    //         <!-- Modal content-->
+                    //         <div class="modal-content">
+                    //             <div class="modal-header">
+                    //                 <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    //                 <h4 class="modal-title">"title":</h4>
+                    //             </div>
+                    //             <div class="modal-body">
+                    //                 <p>
+                    //                     <ul>
+                    //                        <li>"vote_average":</li>
+                    //                        <li>"original_language":</li> 
+                    //                        <li>"adult":</li> 
+                    //                        <li>"overview":</li>
+                    //                     </ul>
+                    //                 </p>
+                    //             </div>
+                    //             <div class="modal-footer">
+                    //                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    //             </div>
+                    //         </div>
+                    //     </div>
+                    // </div>
+
+
+
+
+
                 poster.attr("src", "https://image.tmdb.org/t/p/original/" + posters[k]);
                 poster.css("height", "250px")
                 div.append(poster);
@@ -113,6 +151,7 @@ window.onload = function () {
                 div.attr("data-title", titles[k]);
                 div.css("position", "relative")
                 div.css("z-index", "0")
+                // div.append(modal);
                 $("#display-movies-here").append(div);
             }
         }
@@ -138,7 +177,7 @@ window.onload = function () {
 
 
     $("#done").on("click", function () {
-        database.ref("Group1/selected").set(selected);
+        database.ref("Group1/selected").push(selected);
     })
     //create the more info buttons underneath
 
