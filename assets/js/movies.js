@@ -1,3 +1,5 @@
+//Should be noted that this was used as a mess of code to make functions that would be use both on this page and other pages in coordination with movie-tests.html
+
 window.onload = function () {
     //variable
     var year1 = 2012;
