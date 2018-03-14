@@ -22,6 +22,7 @@ h2{
 img{
     width: 100%;
     /* margin: 10px; */
+    box-shadow: 5px 5px;
     box-shadow: 15px 15px;
     color: rgb(211, 211, 212);
 }
@@ -129,7 +130,7 @@ img{
 .member {
     height: 50px;
     width: 50px;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     float: left;
     margin: 25px 50px;
     border-radius: 15px;
