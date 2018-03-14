@@ -36,6 +36,10 @@
                     </li>
 
                 </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="../navbar/" id="userName">Default</a></li>
+                    <li id="btnLogOut"><a href="#">Sign Out</a></li>
+                  </ul>
             </div>
             <!--/.nav-collapse -->
         </div>
@@ -62,8 +66,8 @@
                             <p>Genre</p>
                         </div>
                         <div class="col-md-8">
-                            <select class="form-control">
-                                <option>Action/Adventure</option>
+                            <select class="form-control" id="genre">
+                                <option>Action</option>
                                 <option>Comedy</option>
                                 <option>Documentary</option>
                                 <option>Drama</option>
@@ -80,69 +84,27 @@
                             <p>Year</p>
                         </div>
                         <div class="col-md-8">
-                            <select class="form-control">
+                            <select class="form-control" id="year">
                                 <option>Silent 1890-1929</option>
                                 <option>Classic 1930-1969</option>
                                 <option>Modern 1970-1999</option>
-                                <option>Contemporary 2000-now</option>
+                                <option>Contemporary 2000-Now</option>
                             </select>
                         </div>
 
 
                     </div>
 
-                    <div class="row">
+                   
 
-                        <div class="col-md-4">
-                            <p>Flik Limit</p>
-                        </div>
-                        <div class="col-md-8">
-                            <select class="form-control">
-                                <option>20</option>
-                                <option>40</option>
-                                <option>60</option>
-                                <option>80</option>
-                                <option>100</option>
-                                <option>120</option>
-                                <option>140</option>
-                                <option>160</option>
-                                <option>180</option>
-                                <option>200</option>
-                            </select>
-                        </div>
-
-
-                    </div>
-
-                    <div class="row">
-
-                        <div class="col-md-4">
-                            <p>Top Piks</p>
-                        </div>
-                        <div class="col-md-8">
-                            <select class="form-control">
-                                <option>4</option>
-                                <option>10</option>
-                                <option>15</option>
-                                <option>20</option>
-                                <option>35</option>
-                            </select>
-                        </div>
-
-
-
-
-                    </div>
 
 
                     <div class="row">
                         <div class="col-md-4">
-                            <button class="btn btn-primary">Submit</button>
+                            <button class="btn btn-primary" id="groupSubmit">Submit</button>
                         </div>
 
-                        <div class="col-md-4">
-                            <button class="btn btn-default">Edit</button>
-                        </div>
+                       
 
                     </div>
 
@@ -215,6 +177,7 @@
     <script src="assets/js/bootstrap.js"></script>
     <!-- My Custom js -->
     <script src="assets/js/app.js"></script>
+    <!-- <script src="assets/js/movies.js"></script> -->
 
 </body>
 
