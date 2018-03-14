@@ -125,7 +125,7 @@ img{
 .member {
     height: 50px;
     width: 50px;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     float: left;
     margin: 25px 50px;
     border-radius: 15px;
