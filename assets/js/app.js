@@ -6,12 +6,12 @@ var config = {
     projectId: "pikaflik-9cfdc",
     storageBucket: "",
     messagingSenderId: "25073261476"
-  };
-  
-  firebase.initializeApp(config);
- 
-  // Created a variable to reference to the firebase 
-  var db = firebase.database();
+};
+
+firebase.initializeApp(config);
+
+// Created a variable to reference to the firebase 
+var db = firebase.database();
 
 //   db.ref().push({
 //     trainName: "choo choo",
@@ -40,23 +40,36 @@ $("#plus-box").on("click", function () {
 
     // } else {
 
-        var newDiv = $("<div class='col-md-3'></div>");
-        var newButton = $("<button>");
-        var p = $("<p>");
-        p.addClass("group-box");
-        newDiv.addClass("top-height");
-        newButton.text("Select");
-        p.append("Group 42");
-        p.append(newButton);
-        // newDiv.attr("margin-top", "25px");
-        newDiv.append(p);
-        $("#first-row").append(newDiv);
+    var newDiv = $("<div class='col-md-3'></div>");
+    var newButton = $("<button>");
+    var p = $("<p>");
+    p.addClass("group-box");
+    newDiv.addClass("top-height");
+    newButton.text("Select");
+    p.append("Group 42");
+    p.append(newButton);
+    // newDiv.attr("margin-top", "25px");
+    newDiv.append(p);
+    $("#first-row").append(newDiv);
     // }
 });
 
+// on click function to clear top movie
+function myFunction() {
 
+    var groupPageReset = document.getElementById("topMoviePoster");
 
-
-
-
+    // This will add the class
+    groupPageReset.classList.add("hide");
+    // This will hide the class
+    groupPageReset.classList.remove("src");
     
+
+    // $('#topMoviePoster').removeAttr('src').replaceWith($image.clone());
+    
+}
+
+
+
+
+
