@@ -14,7 +14,7 @@ body {
 }
 /* h2 styling */
 h2{
-    margin-top: 60px;
+    /* margin-top: 60px; */
     text-align: center;
 }
 
@@ -22,8 +22,10 @@ h2{
 img{
     width: 100%;
     /* margin: 10px; */
-    box-shadow: 5px 5px;
-    box-shadow: 15px 15px;
+
+    /* box-shadow: 5px 5px;
+    box-shadow: 15px 15px; */
+
     color: rgb(211, 211, 212);
 }
 

@@ -37,9 +37,13 @@
 
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="../navbar/" id="userName">Default</a></li>
-                    <li id="btnLogOut"><a href="#">Sign Out</a></li>
-                  </ul>
+                    <li>
+                        <a href="#" id="userName">Default</a>
+                    </li>
+                    <li id="btnLogOut">
+                        <a href="#">Sign Out</a>
+                    </li>
+                </ul>
             </div>
             <!--/.nav-collapse -->
         </div>
@@ -52,10 +56,20 @@
                 <div class="col-md-8">
                     <h1>Group</h1>
                     <p>Members</p>
-                    <div class="member"><img src="assets/images/isaac.png" alt="Member Photo"></div>
-                    <div class="member"><img src="assets/images/mikeal.png" alt="Member Photo"></div>
-                    <div class="member"><img src="assets/images/ben.png" alt="Member Photo"></div>
-                    <div class="member"><img src="assets/images/jaime.png" alt="Member Photo"></div>
+
+                    <div class="member">
+                        <img src="assets/images/isaac.png" alt="Member Photo">
+                    </div>
+                    <div class="member">
+                        <img src="assets/images/mikeal.png" alt="Member Photo">
+                    </div>
+                    <div class="member">
+                        <img src="assets/images/ben.png" alt="Member Photo">
+                    </div>
+                    <div class="member">
+                        <img src="assets/images/jaime.png" alt="Member Photo">
+                    </div>
+
                 </div>
                 <div class="col-md-4 right-border">
                     <h2 class="center">Features</h2>
@@ -95,16 +109,20 @@
 
                     </div>
 
-                   
+
 
 
 
                     <div class="row">
                         <div class="col-md-4">
                             <button class="btn btn-primary" id="groupSubmit">Submit</button>
+
                         </div>
 
-                       
+                        <div class="col-md-4">
+
+                            <!-- <button class="btn btn-secondary" id="resetSubmit">Reset All Selections</button> -->
+                        </div>
 
                     </div>
 
@@ -120,7 +138,7 @@
 
                 <div class="col-md-4">
                     <button class="btn btn-primary">
-                        <a href="movie.html">Movie List</a>
+                        <a href="movie-tests.html">Movie List</a>
                     </button>
                 </div>
             </div>
@@ -130,20 +148,33 @@
 
     <!-- group page results row -->
 
-    <div class="container">
+    <div class="container hide" id='winResults'>
 
         <div class="row" class="results">
-            <div class="col-md-4">
-                <h2>Top Pick!</h2>
-                <img src="moviePoster.jpg" alt="" srcset="" class="topMoviePoster">
-            </div>
-            <div class="col-md-8">
-                <p>Movie 1</p>
-                <p>Movie 2</p>
-            </div>
+            <div class="col-md-12">
+                <h2>Top Pick:</h2>
+                <h2 id='pickHeader'>Top Pick!</h2>
 
+            </div>
 
         </div>
+
+        <div class="row">
+
+            <div class="col-md-4" id='topMoviePoster'>
+               
+            </div>
+
+            <div class="col-md-6" id='topMovieInfo'>
+                   
+                </div>
+        </div>
+
+
+
+
+
+    </div>
     </div>
 
 
@@ -160,14 +191,6 @@
 
 
 
-    <!-- Footer Begin -->
-    <footer class="footer">
-        <div class="container">
-            <p>Footer!</p>
-
-        </div>
-    </footer>
-    <!-- Footer End -->
 
     <!-- Bootstrap core JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

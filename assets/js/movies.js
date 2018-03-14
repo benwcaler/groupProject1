@@ -15,7 +15,7 @@ window.onload = function () {
         messagingSenderId: "25073261476"
       
       };
-    firebase.initializeApp(config);
+    // firebase.initializeApp(config);
     var database = firebase.database();
     var pages = [];
     var calls = 0;
@@ -175,9 +175,13 @@ window.onload = function () {
         }
     });
 
+    // Line for hiding submitted section on movie list
+    var submitted = document.getElementById("submitted");
+
 
     $("#done").on("click", function () {
         database.ref("Group1/selected").push(selected);
+        submitted.classList.remove("hide");
     })
     //create the more info buttons underneath
 
