@@ -1,6 +1,6 @@
 # PikaFlik - A website for friends who love movies.
 
-##  Built with Bootstrap, incorporating Firebase, jQuery and API calls to themoviedb.org.
+##  Built with Bootstrap, Firebase, jQuery and API calls to themoviedb.org.
 
 
 A website to help groups of friends decide on what movie they want to watch by voting on a common list of movies and seeing which movies get the highest votes from your friends.
